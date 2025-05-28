@@ -1,0 +1,106 @@
+body {
+    margin: 0; /* Remove a margem padrão do navegador para ocupar toda a tela */
+    font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+    background-color: #ccc; /* Define a cor de fundo cinza claro */
+  }
+  
+  .cabecalho {
+    background-color: #1a355c; /* Cor de fundo azul escuro para o cabeçalho */
+    display: flex; /* Utiliza Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre os elementos (um vai para a esquerda, outro para a direita) */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    padding: 50px 50px; /* Espaçamento interno generoso */
+  }
+  
+  .perfil-icon {
+    width: 40px; /* Largura do ícone de perfil */
+    height: 40px; /* Altura do ícone de perfil */
+    background-color: #000; /* Fundo preto */
+    border-radius: 50%; /* Torna o ícone circular */
+    display: flex; /* Centraliza o conteúdo dentro do círculo */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boneco {
+    color: #fff; /* Ícone branco */
+    font-size: 22px; /* Tamanho da fonte do boneco */
+  }
+  
+  .busca {
+    padding: 5px; /* Espaçamento interno do campo de busca */
+    border-radius: 10px; /* Cantos arredondados */
+    border: none; /* Remove a borda padrão */
+    font-size: 12px; /* Tamanho da fonte */
+  }
+  
+  .topo {
+    background-color: #1a355c; /* Fundo azul escuro */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Flexbox para layout em linha */
+    flex-direction: row; /* Coloca os elementos lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    color: white; /* Cor do texto */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  }
+  
+  .bloco-texto {
+    background-color: #f85f43; /* Fundo laranja vibrante */
+    border-radius: 80px; /* Borda extremamente arredondada */
+    padding: 40px; /* Espaçamento interno */
+    max-width: 300px; /* Largura máxima para manter legibilidade */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    margin-right: 10px; /* Espaço entre o bloco de texto e as imagens */
+  }
+  
+  .imagens-topo {
+    display: flex; /* Flexbox para alinhar as imagens */
+    gap: 15px; /* Espaço entre elas */
+    flex-wrap: wrap; /* Quebra em múltiplas linhas, se necessário */
+  }
+  
+  .img-grande {
+    height: 550px; /* Altura fixa para imagem grande */
+  }
+  
+  .img-media {
+    height: 400px; /* Altura igual à grande para manter proporção */
+  }
+  
+  .img-pequena {
+    height: 500px; /* Imagem menor */
+  }
+  
+  .menu {
+    background-color: white; /* Fundo branco */
+    padding: 10px 0; /* Espaço acima e abaixo */
+    text-align: center; /* Centraliza os links do menu */
+    border-bottom: 2px solid #ccc; /* Linha de separação abaixo do menu */
+  }
+  
+  .menu a {
+    color: #f85f43; /* Cor dos links do menu */
+    font-weight: bold; /* Negrito */
+    margin: 0 30px; /* Espaço lateral entre os links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte dos links */
+  }
+  
+  .cards {
+    display: grid; /* Layout em grade */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Gera colunas flexíveis com no mínimo 160px */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 30px; /* Espaçamento interno */
+    background-color: #ccc; /* Fundo cinza claro */
+  }
+  
+  .card {
+    background-color: white; /* Fundo branco para os cards */
+    padding: 40px; /* Espaço interno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para efeito de elevação */
+    text-align: center; /* Texto centralizado */
+    font-weight: bold; /* Texto em negrito */
+  }
+  
