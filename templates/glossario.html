@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='glossario.css') }}">
+    <link rel="shortcut icon" href="../static/images/senac.png">
+    <title>Senac - Dicionário de Libras</title>
+</head>
+<body>
+    
+    <header>       
+        <div class="header-content">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" id="logo-icon"></a>
+            <h1>Glossário de Libras</h1>
+            <div class="search-box">
+                <form action="/pesquisar" method="POST"><input type="text" placeholder="🔍 Pesquisar EXPRESSÃO..." class="busca" name="pesquisa" /></form>
+            </div>
+        </div>
+        <div id="letras">
+            <a href="{{ url_for('glossario') }}">Todas</a>
+            {% for letra in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
+                <a href="{{ url_for('glossario', letra=letra) }}">
+                {{ letra }}
+            </a>
+        {% endfor %}
+        </div>
+        <main>
+            <h2>Expressões</h2>
+            <table>
+            <thead>
+                <tr>
+                    <th>Expressões:</th>
+                    <th>Descrição:</th>
+                    {% if session.get('admin_id') %}
+                        <th>Opções:</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+            {% for palavra in palavras %}
+                <tr class="gray">
+                    <td><a href="{{ url_for('exibir_palavra', id=palavra.id) }}">{{ palavra.titulo }}</a></td>
+                    <td>{{ palavra.descricao }}</td>
+                    {% if session.get('admin_id') %}
+                        <td id="opc_adm"><a href="{{ url_for('edit_palavra', id=palavra.id) }}" ><button>EDITAR</button></a><hr><a href="{{ url_for('deletar_palavra', id=palavra.id) }}" ><button id="delete">DELETAR</button></a></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    
+</header>
+</body>
+</html>

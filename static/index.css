@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+#logar{
+  color: #f4f4f4;
+  font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+#logar:hover{
+  color: #f85f43;
+}
+/* CABEÇALHO */
+.cabecalho {
+  background-color: #1a355c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.perfil-area {
+  position: relative;
+}
+
+.perfil-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.perfil-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-opcoes {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 100%;
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 180px;
+}
+
+.menu-opcoes a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-opcoes a:hover {
+  background-color: #f1f1f1;
+}
+
+.menu-opcoes hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.busca {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+/* TOPO */
+.topo {
+  background-color: #1a355c;
+  padding: 10px 10px;
+  color: white;
+}
+
+.container-topo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.lado-esquerdo {
+  flex: 1;
+  min-width: 300px;
+  max-width: 75%;
+}
+
+.texto-topo {
+  background-color: #f85f43;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.imagens-abaixo {
+  display: flex;
+  gap: 20px;
+}
+
+.img-pequena {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.lado-direito {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-wrap: nowrap;
+
+  margin-left: auto; /* empurra para a direita */
+  padding-left: 20px;
+
+  position:-ms-page;
+  z-index: 10;
+
+  /* Adiciona margem extra para empurrar mais */
+  margin-right: -230px; /* pode aumentar esse valor conforme precisar */
+
+
+}
+
+
+.img-grande {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* MENU */
+.menu {
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu a {
+  color: #f85f43;
+  font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.menu a:hover{
+  color: #204d82;
+}
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+  background-color: #ccc;
+  justify-items: center;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 350px;
+  height: 280px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTAINER */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0; 
+}
+
+.container {
+  background-color: #1f4d8d; 
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.logo-senac {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo-senac img {
+  width: 120px;
+  max-width: 100%;
+  display: block;
+}
+.container h2 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.container p {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.imagem-turma, .imagem-turma-libras {
+  display: inline-block;
+  margin: 0 15px;
+  vertical-align: top;
+}
+
+
+.imagem-turma-libras img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.imagem-turma img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.titulo-abaixo {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .texto p {
+    font-size: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
